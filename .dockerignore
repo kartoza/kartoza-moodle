@@ -1,0 +1,10 @@
+.git
+.gitignore
+.dockerignore
+README.md
+LICENSE
+.env
+*.env
+config.php
+*.tar
+*.tar.gz

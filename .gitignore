@@ -1,0 +1,39 @@
+# --- Secrets and real configuration: never commit these ---
+.env
+*.env
+config.php
+!config-dist.php
+*.pem
+*.key
+*.crt
+kubeconfig*
+*.kubeconfig
+
+# --- Moodle runtime data and dumps ---
+moodledata/
+*.sql
+*.sql.gz
+*.dump
+*.log
+
+# --- Build artifacts ---
+*.tar
+*.tar.gz
+*.tgz
+dist/
+tmp/
+
+# --- Plugin ZIPs ---
+# plugins/*.zip is intentionally NOT ignored, so CI can reproduce the image.
+# If you keep ZIPs in a private artifact store instead, uncomment:
+# plugins/*.zip
+# Keep the folder itself in git:
+!plugins/.gitkeep
+
+# --- Editors and OS files ---
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
